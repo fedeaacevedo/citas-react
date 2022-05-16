@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Formulario = () => {
+const Formulario = ({pacientes, setPacientes}) => {
 
   const [nombre, setNombre] = useState('');
   const [propietario, setPropietario] = useState('');
@@ -17,13 +17,29 @@ const Formulario = () => {
     if ([nombre, propietario, email, alta, sintomas].includes('')) {
       console.log('Complete todos los campos');
       setError(true)
-    } else {
-      console.log('Todos los campos completos..')
+      return;
     }
+    //Seteamos el error en falso para que se borre y vuelva a aparecer en caso de ser necesario
+    setError(false)
 
+    const objetoPaciente = {
+      nombre,
+      propietario,
+      email, 
+      alta, 
+      sintomas
+    }
+    //Nos crea una copia de nuestro objeto pacientes y agrega los nuevos 
+    setPacientes([...pacientes, objetoPaciente])
+
+    //REINICIAMOS EL FORMULARIO
+    setNombre('')
+    setPropietario('')
+    setEmail('')
+    setAlta('')
+    sintomas('')
 
   }
-
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
 
