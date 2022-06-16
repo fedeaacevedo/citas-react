@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Paciente = ({paciente}) => {
+const Paciente = ({ paciente }) => {
   return (
-    
+
 
     <div className="mx-3 my-5 bg-white shadow-md px-5 py-10 rounded-xl">
       <p className="font-bold mb-3 text-gray-700 uppercase">
@@ -32,7 +32,7 @@ const Paciente = ({paciente}) => {
         >
           Editar
         </button>
-     
+
 
         <button
           type='button'
@@ -41,12 +41,12 @@ const Paciente = ({paciente}) => {
           Editar
         </button>
 
-        </div>
+      </div>
 
     </div>
-    
 
-   
+
+
   )
 }
 
