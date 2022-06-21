@@ -6,7 +6,7 @@ const Paciente = ({ paciente, setPaciente, eliminarPaciente }) => {
     const respuesta = confirm('Desea eliminar este paciente?')
 
     if(respuesta){
-      eliminarPaciente(id)
+      eliminarPaciente(paciente.id)
     }
   }
 
