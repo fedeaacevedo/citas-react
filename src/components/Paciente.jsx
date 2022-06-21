@@ -18,7 +18,7 @@ const Paciente = ({ paciente, setPaciente }) => {
       </p>
 
       <p className="font-bold mb-3 text-gray-700 uppercase">
-        Fecha Alta: {''}<span className="font-normal normal-case">{paciente.fecha}</span>
+        Fecha Alta: {''}<span className="font-normal normal-case">{paciente.alta}</span>
       </p>
 
       <p className="font-bold mb-3 text-gray-700 uppercase">
